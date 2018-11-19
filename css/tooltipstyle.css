@@ -43,7 +43,7 @@
     z-index: 1;
     bottom: 105%;
     left: 50%;
-    margin-left: -10%;
+    margin-left: -35%;
 }
 
 .tooltip-bottom .tooltiptext::after {
@@ -74,7 +74,7 @@
     z-index: 1;
     top: 105%;
     left: 50%;
-    margin-left: -10%;
+    margin-left: -35%;
 }
 
 .tooltip-top .tooltiptext::after {
