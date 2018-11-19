@@ -29,8 +29,8 @@ function toolTip(element, text, position) {
   });
 }
 
-toolTip(".div1", "i am a tooltip", "right");
-toolTip(".div2", "i am a tooltip", "left");
-toolTip(".div3", "i am a tooltip", "top");
-toolTip(".div4", "i am a tooltip", "bottom");
+toolTip(".div1", "i am a right tooltip", "right");
+toolTip(".div2", "i am a left tooltip", "left");
+toolTip(".div3", "i am a top tooltip", "top");
+toolTip(".div4", "i am a bottom tooltip", "bottom");
 toolTip("p", "i am a tooltip paragraph", "bottom");
