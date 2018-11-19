@@ -1,6 +1,5 @@
 .tooltip {
     position: relative;
-    border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
@@ -31,7 +30,6 @@
 
 .tooltip-bottom {
     position: relative;
-    border-bottom: 1px dotted black;
 }
 
 .tooltip-bottom .tooltiptext {
@@ -63,7 +61,6 @@
 
 .tooltip-top {
     position: relative;
-    border-bottom: 1px dotted black;
 }
 
 .tooltip-top .tooltiptext {
@@ -95,7 +92,6 @@
 
 .tooltip-right {
     position: relative;
-    border-bottom: 1px dotted black;
 }
 
 .tooltip-right .tooltiptext {
