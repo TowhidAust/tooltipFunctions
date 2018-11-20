@@ -114,7 +114,7 @@ function toolTip(element, text, position, offset, move) {
     $("span").remove();
   });
 }
-toolTip(".div1", "i am a tooltip", "right", "default", 0);
+
 
 
 //toolTip(".div1", "i am a tooltip", "right", "default", 0);
