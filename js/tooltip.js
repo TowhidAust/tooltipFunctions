@@ -7,16 +7,36 @@
             6:function pattern: toolTip(element, text, position, offset, move);
             
   --------------------------------------------------------------------------------
-            => by default this block of code will be executed.
-            => condition: set the offset to "default" in the function argument.
-            => function pattern: toolTip(element, text, position, offset, move);
+            1. how to use???
+            ---------------default tooltips example:------------------------
+            => toolTip(".div1", "i am a tooltip", "right", "default", 0);
+            => toolTip(".div1", "i am a tooltip", "left", "default", 0);
+            => toolTip(".div1", "i am a tooltip", "top", "default", 0);
+            => toolTip(".div1", "i am a tooltip", "bottom", "default", 0);
+            ----------------custom tooltip example---------------------------
+            customRightOrLeft:(right)
+            => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
+            customTopOrBottom: (right)
+            => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
+
+            customRightOrLeft: (left)
+            => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", -105);
+            customTopOrBottom:
+            => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", 105);
+
+            customRightOrLeft:(top)
+            => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", -105);
+            customTopOrBottom: (top)
+            => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
+
+            customRightOrLeft: (bottom)
+            => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
+            customTopOrBottom: (bottom)
+            => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", 105);
+
+
   -----------------------------------------------------------------------------
     */
-
-
-
-
-
 
 
 
@@ -26,58 +46,66 @@ function toolTip(element, text, position, offset, move) {
     if ((element == null) || text == null || position == null || offset == null || move == null) {
       alert("please enter all the arguments currectly");
     } else {
-
       if ((position === "right") && (offset === "default") && (move === 0)) {
-        // default tooltip
+        // default tooltip right
         $(element).addClass("tooltip");
         $(element).append(`<span class="tooltiptext"> ${text} </span>`);
       } else if ((position === "right") && (offset === "customRightOrLeft")) {
-        // custom tooltip for moving right or left
-        // positive value move right||negative value move left
+        // custom move tooltip move right or left
         $(element).addClass("tooltip");
         $(element).append(`<span class="tooltiptext"> ${text} </span>`);
         $(".tooltiptext").css("left", move + "%");
       } else if ((position === "right") && (offset === "customTopOrBottom")) {
-        // custom tooltip for moving top or bottom
-        // positive value move top||negative value move bottom
+        // custom move tooltip top or bottom
         $(element).addClass("tooltip");
         $(element).append(`<span class="tooltiptext"> ${text} </span>`);
         $(".tooltiptext").css("top", move + "%");
       } else if ((position === "left") && (offset === "default") && (move === 0)) {
-        // default tooltip
+        // deault tooltip left
         $(element).addClass("tooltip-right");
         $(element).append(`<span class="tooltiptext"> ${text} </span>`);
       } else if ((position === "left") && (offset === "customRightOrLeft")) {
-        // custom tooltip for moving right or left
-        // positive value move left||negative value move right
+        // custom move right or left
         $(element).addClass("tooltip-right");
         $(element).append(`<span class="tooltiptext"> ${text} </span>`);
         $(".tooltiptext").css("right", move + "%");
       } else if ((position === "left") && (offset === "customTopOrBottom")) {
-        // custom tooltip for moving top or bottom
-        // positive value move top||negative value move bottom
+        // custom move top or bottom
         $(element).addClass("tooltip-right");
+        $(element).append(`<span class="tooltiptext"> ${text} </span>`);
+        $(".tooltiptext").css("top", move + "%");
+      } else if ((position === "top") && (offset === "default") && (move === 0)) {
+        // default tooltip top
+        $(element).addClass("tooltip-bottom");
+        $(element).append(`<span class="tooltiptext"> ${text} </span>`);
+      } else if ((position === "top") && (offset === "customRightOrLeft")) {
+        // custom move right or left
+        $(element).addClass("tooltip-bottom");
+        $(element).append(`<span class="tooltiptext"> ${text} </span>`);
+        $(".tooltiptext").css("margin-left", move + "%");
+      } else if ((position === "top") && (offset === "customTopOrBottom")) {
+        // custom move top or bottom
+        $(element).addClass("tooltip-bottom");
+        $(element).append(`<span class="tooltiptext"> ${text} </span>`);
+        $(".tooltiptext").css("bottom", move + "%");
+      } else if ((position === "bottom") && (offset === "default") && (move === 0)) {
+        // default tooltip
+        $(element).addClass("tooltip-top");
+        $(element).append(`<span class="tooltiptext"> ${text} </span>`);
+      } else if ((position === "bottom") && (offset === "customRightOrLeft")) {
+        // custom move left or right
+        $(element).addClass("tooltip-top");
+        $(element).append(`<span class="tooltiptext"> ${text} </span>`);
+        $(".tooltiptext").css("margin-left", move + "%");
+      } else if ((position === "bottom") && (offset === "customTopOrBottom")) {
+        // custom move top or bottom
+        $(element).addClass("tooltip-top");
         $(element).append(`<span class="tooltiptext"> ${text} </span>`);
         $(".tooltiptext").css("top", move + "%");
       }
     }
-
-
-
-    // else if (position === "left") {
-    //   $(element).addClass("tooltip-right");
-    //   $(element).append(`<span class="tooltiptext"> ${text} </span>`);
-    // } else if (position === "bottom") {
-    //   $(element).addClass("tooltip-top");
-    //   $(element).append(`<span class="tooltiptext"> ${text} </span>`);
-    // } else if (position === "top") {
-    //   $(element).addClass("tooltip-bottom");
-    //   $(element).append(`<span class="tooltiptext"> ${text} </span>`);
-    // } else {
-    //   console.log("i am from Tooltip if else");
-    // }
   });
-
+  // removeing the class after mouse out to disappear
   $(element).mouseout(function () {
     $(element).removeClass("tooltip");
     $(element).removeClass("tooltip-bottom");
@@ -86,5 +114,32 @@ function toolTip(element, text, position, offset, move) {
     $("span").remove();
   });
 }
+toolTip(".div1", "i am a tooltip", "right", "default", 0);
 
-toolTip(".div1", "i am a right tooltip", "right", "customRightOrLeft", 105);
+
+//toolTip(".div1", "i am a tooltip", "right", "default", 0);
+//toolTip(".div1", "i am a tooltip", "left", "default", 0);
+//toolTip(".div1", "i am a tooltip", "top", "default", 0);
+//toolTip(".div1", "i am a tooltip", "bottom", "default", 0);
+
+
+
+// customRightOrLeft:(right)
+// toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
+// customTopOrBottom: (right)
+// toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
+
+// customRightOrLeft: (left)
+// => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
+// customTopOrBottom:
+// => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
+
+// customRightOrLeft:(top)
+// => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
+// customTopOrBottom: (top)
+// => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
+
+// customRightOrLeft: (bottom)
+// => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
+// customTopOrBottom: (bottom)
+// => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
