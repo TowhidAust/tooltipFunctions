@@ -115,9 +115,9 @@ function toolTip(element, text, position, offset, move) {
   });
 }
 
+toolTip(".div2", "i am a tooltip lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet lorem jashdf ipsum dolor sinet i am lorem ipsum habijabi sinet color dhfa", "left", "customRightOrLeft", 105);
 
-
-//toolTip(".div1", "i am a tooltip", "right", "default", 0);
+// toolTip(".div1", "i am a tooltip", "right", "default", 0);
 //toolTip(".div1", "i am a tooltip", "left", "default", 0);
 //toolTip(".div1", "i am a tooltip", "top", "default", 0);
 //toolTip(".div1", "i am a tooltip", "bottom", "default", 0);
@@ -125,14 +125,14 @@ function toolTip(element, text, position, offset, move) {
 
 
 // customRightOrLeft:(right)
-// toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
+// toolTip(".div1", "i am a tooltip", "right", "customRightOrLeft", 105);
 // customTopOrBottom: (right)
-// toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
+// toolTip(".div1", "i am a tooltip", "right", "customTopOrBottom", -105);
 
 // customRightOrLeft: (left)
-// => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
+// => toolTip(".div1", "i am a tooltip", "left", "customRightOrLeft", 105);
 // customTopOrBottom:
-// => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
+// => toolTip(".div1", "i am a tooltip", "left", "customTopOrBottom", -105);
 
 // customRightOrLeft:(top)
 // => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
@@ -140,6 +140,6 @@ function toolTip(element, text, position, offset, move) {
 // => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
 
 // customRightOrLeft: (bottom)
-// => toolTip(".div1", "i am a tooltip", "top", "customRightOrLeft", 105);
+// => toolTip(".div1", "i am a tooltip", "bottom", "customRightOrLeft", 105);
 // customTopOrBottom: (bottom)
-// => toolTip(".div1", "i am a tooltip", "top", "customTopOrBottom", -105);
+// => toolTip(".div1", "i am a tooltip", "bottom", "customTopOrBottom", -105);
